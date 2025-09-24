@@ -33,23 +33,25 @@ This README explains **how I set up, ran, tested, and verified** everything. I h
   docker run -d --name kaiburr-mongo -p 27017:27017 -v kaiburr_mongo_data:/data/db mongo:6.0
 
 **Clone repository**
-
+```bash
 git clone https://github.com/<your-username>/kaiburr-task3-frontend.git
 cd kaiburr-task3-frontend
-
+```
 **Install dependencies**
-
+```
 npm install
-
+```
 **Development server**
 Start frontend with Vite:
-
+```
 npm run dev
+```
 		VITE vX.Y.Z ready in ...
 		Local:   http://localhost:5173/
 
 
 **Project Structure**
+
 kaiburr-task3-frontend/
 ├─ src/
 │  ├─ App.tsx                  # Main app layout
