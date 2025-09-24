@@ -35,7 +35,7 @@ This README explains **how I set up, ran, tested, and verified** everything. I h
 
 **Clone repository**
 ```bash
-git clone https://github.com/<your-username>/kaiburr-task3-frontend.git
+git clone https://github.com/Mathivathani-G/kaiburr-task3-frontend.git
 cd kaiburr-task3-frontend
 ```
 **Install dependencies**
