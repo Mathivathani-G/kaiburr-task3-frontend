@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+# Kaiburr — Task 3: Web UI (React + TypeScript + Ant Design)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Name**: Mathivathani  
+**Date**: 2025-09-23  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Overview
+This project is my implementation of **Task 3** from the Kaiburr assessment.  
 
-## React Compiler
+It is a **frontend Web UI** built with:
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **Ant Design** (UI components)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The UI connects to the **Task Manager backend** (Task 1: Spring Boot + MongoDB) and allows complete task lifecycle management:
+- Create / Update tasks
+- List and search tasks
+- Run commands and view execution results
+- Show execution history
+- Delete tasks
 
-## Expanding the ESLint configuration
+This README explains **how I set up, ran, tested, and verified** everything. I have also included screenshots with date/time and my name in terminal, as requested in the instructions.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Setup & Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 1. Prerequisites
+- **Node.js 18+** and **npm**
+- **Backend from Task 1** running locally on `http://localhost:8080`
+- **MongoDB** running via Docker (from Task 1):
+  ```bash
+  docker run -d --name kaiburr-mongo -p 27017:27017 -v kaiburr_mongo_data:/data/db mongo:6.0
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Clone repository**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+git clone https://github.com/<your-username>/kaiburr-task3-frontend.git
+cd kaiburr-task3-frontend
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Install dependencies**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Development server**
+Start frontend with Vite:
+
+npm run dev
+		VITE vX.Y.Z ready in ...
+		Local:   http://localhost:5173/
+
+
+**Project Structure**
+kaiburr-task3-frontend/
+├─ src/
+│  ├─ App.tsx                  # Main app layout
+│  ├─ main.tsx                 # React entry
+│  ├─ api.ts                   # API client (fetch calls to backend)
+│  ├─ types.ts                 # Task and TaskExecution interfaces
+│  └─ components/
+│     ├─ TaskForm.tsx          # Add/Edit Task form
+│     ├─ TaskTable.tsx         # Table with CRUD + Run buttons
+│     └─ ExecHistoryModal.tsx  # Modal showing execution history
+├─ vite.config.ts              # Proxy config (/api → backend)
+├─ package.json
+├─ README.md
+└─ screenshots/                # Screenshots 
+
