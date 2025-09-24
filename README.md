@@ -46,12 +46,13 @@ Start frontend with Vite:
 ```
 npm run dev
 ```
-		VITE vX.Y.Z ready in ...
-		Local:   http://localhost:5173/
+VITE vX.Y.Z ready in ...
+Local:   http://localhost:5173/
 
 
 **Project Structure**
 
+```graphql
 kaiburr-task3-frontend/
 ├─ src/
 │  ├─ App.tsx                  # Main app layout
