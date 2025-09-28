@@ -109,3 +109,34 @@ kaiburr-task3-frontend/
 
 ![deleted](https://github.com/Mathivathani-G/kaiburr-task3-frontend/blob/main/Screenshots%20Task3/Delete%20Task%20Frontend%20%26%20Backend.png)
 
+
+
+# Kaiburr — Task 4 : CI-CD pipeline for Web UI (React + TypeScript + Ant Design)
+
+## CI/CD Pipeline – Frontend
+
+This project uses **GitHub Actions** to implement a fully automated **CI/CD pipeline** for the React frontend.
+
+### Workflow
+
+1. **Trigger**: Workflow runs on every `push` or `pull request` to the `main` branch.
+2. **Steps**:
+   - **Checkout code** from GitHub.
+   - **Setup Node.js** environment.
+   - **Install dependencies** using `npm install`.
+   - **Build React app** using `npx vite build`.
+   - **Build Docker image** using the provided `Dockerfile`.
+   - **Run Docker container** to verify the frontend app.
+3. **Dockerfile**:
+   - Stage 1: Build React app (`npx vite build`).
+   - Stage 2: Serve app using Nginx on port `80`.
+
+### Outcome
+
+- Docker image for frontend is built automatically on every push.
+- Workflow status visible in GitHub Actions.
+- Frontend app can be run locally using:
+
+```bash
+docker build -t kaiburr-frontend:latest .
+docker run -p 3000:80 kaiburr-frontend:latest
