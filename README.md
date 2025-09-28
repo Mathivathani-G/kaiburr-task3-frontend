@@ -68,4 +68,44 @@ kaiburr-task3-frontend/
 ├─ package.json
 ├─ README.md
 └─ screenshots/                # Screenshots 
+```
+**Initial Setup**
+
+
+![Setup](https://github.com/Mathivathani-G/kaiburr-task3-frontend/blob/main/Screenshots%20Task3/Initial%20Setup%20Frontend%20and%20Backend.png)
+
+**Create Task**
+
+
+![Create task](https://github.com/Mathivathani-G/kaiburr-task3-frontend/blob/main/Screenshots%20Task3/Create%20task%20frontend.png)
+
+**Execute Task**
+
+
+![execution](https://github.com/Mathivathani-G/kaiburr-task3-frontend/blob/main/Screenshots%20Task3/Execute%20Task%20fronend%20%26%20Backend.png)
+
+**Execution History**
+
+
+![execution history](https://github.com/Mathivathani-G/kaiburr-task3-frontend/blob/main/Screenshots%20Task3/Execution%20History%20Frontend.png)
+
+**Execution History along with Backend**
+
+
+![Setup](https://github.com/Mathivathani-G/kaiburr-task3-frontend/blob/main/Screenshots%20Task3/Execution%20History%20Frontend%20%26%20Backend.png)
+
+**Search Task**
+
+
+![Search](https://github.com/Mathivathani-G/kaiburr-task3-frontend/blob/main/Screenshots%20Task3/Search%20Task%20Frontend.png)
+
+**Delete Task**
+
+
+![delete](https://github.com/Mathivathani-G/kaiburr-task3-frontend/blob/main/Screenshots%20Task3/Delete%20Task%20Frontend.png)
+
+**Deleted Task Backend**
+
+
+![deleted](https://github.com/Mathivathani-G/kaiburr-task3-frontend/blob/main/Screenshots%20Task3/Delete%20Task%20Frontend%20%26%20Backend.png)
 
